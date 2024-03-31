@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/13dc34c750.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/jpg" href="src/img/y_2021.jpg">
+    <link rel="stylesheet" href="src/css/web.css">
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/responsive.css">
+    <title>ReadComic</title>
+</head>
+<body>
+    <div id="comic-head">
+        <div class="col">
+            <a href="#" >
+                <img class="img_logo" style="width: 120px; height: 30px; object-fit: cover; border-radius: 3px" src="src/img/y_2021.jpg" alt="">
+                <span>ExtraComic</span>
+            </a>
+            <i id="navIcon" class="fa-solid fa-bars"></i>
+            <i id="closeNavIcon" class="fa-solid fa-xmark close"></i>
+        </div>
+    </div>
+    <div class="list-nav">
+        <div class="col list-nav_btn">
+            <div id="setting" class="">Thêm truyện</div>
+            <div class="genre-web">Thể loại</div>
+            <div  id="another_web" > Website</div>
+            <a href="./array.html" id="array_api" class="">
+                Mảng API
+            </a>
+            <a id="export_api" href="" target="_blank">Google Sheet</a>
+            <a href="./direct.html" id="direct-web">
+                Hướng dẫn
+            </a>
+        </div>
+    </div>
+    <div id="comic-random">
+        <div class="col">
+            <img class="comic-random_img" src="" alt="">
+            <img class="comic-random_background" src="src/img/y_2021(1).jpg" alt="">
+            <span class="comic-random_wrap">
+                <b>Truyện đề xuất:</b>
+                <div class="comic-random_name name"></div>
+                <div class="comic-random_genre"></div>
+                <div class="comic-random_links">
+                    <a href="" target="_blank" class="random_links-comic">Đọc truyện</a>
+                    <a href="" target="_blank" class="random_links-chap">Chương <span></span></a>
+                </div>
+            </span>
+            <div class="comic-random_overlay"></div>
+        </div>
+    </div>
+    <div id="comic-genre">
+        <div class="comic-genre_title">
+            <div class="col">Danh sách truyện theo thể loại</div>
+        </div>
+        <div class="col">
+            <div class="comic-genre_box"><!--JS--></div>
+        </div>
+    </div>
+    <div id="comic-nav">
+        <div class="col">
+            <div class="comic-nav_infor">
+                Thể loại truyện mà bạn đang tìm: <span>Tất cả</span>
+            </div>
+            <div class="comic-nav_icon">
+                <i class="fa-solid fa-chevron-down"></i>
+                <i class="fa-solid fa-chevron-up close"></i>
+            </div>
+            <ul class="comic-nav_type">
+                <li class="choose-btn">Tất cả</li>
+                <li>Manhua</li>
+                <li>Manga</li>
+                <li>Manhwa</li>
+                <li>
+                    <input type="text" placeholder="Search comic...">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="content col">
+        <div id="list-comic"><!--JS--></div>
+        <div id="extra-comic" class="close flex center border radius">
+            <form action="" id="form-comic">
+                <div class="box-head name">Extra comic</div>
+                <div class="name-infor">
+                    <input type="text" placeholder="Name Comic" class="extra-name border radius" required>
+                    <input type="text" placeholder="Main" class="extra-character border radius" required>
+                </div>
+                <input type="text" placeholder="Thêm Đường Dẫn" class="extra-link border radius" required>
+                <input type="text" placeholder="Thêm Ảnh" class="extra-img border radius" required>
+                <span class="flex">
+                    <input type="number" placeholder="Chapter" class="extra-chap border radius" min="0" max="20000">
+                    <select name="genre" id="type-comic" class="set-select">
+                        <option value="Manhua">Manhua</option>
+                        <option value="Manhwa" >Manhwa</option>
+                        <option value="Manga">Manga</option>
+                    </select>
+                </span>
+                <input type="text" placeholder="Thêm thể loại" class="extra-genre border radius" required>
+                <span class="reload-web">
+                    <label for="reload-btn">Sau khi thêm truyện thành công bạn có muốn reset lại trang?</label>
+                    <input type="checkbox" id="reload-btn">
+                </span>
+                <input type="submit" value="Extra Comic" class="box-btn flex center">
+                <input type="submit" value="Cập Nhật" class="box-btn flex center">
+                
+            </form>
+            <div class="box-demo">
+                <img class="demo_img img border" src="" alt="">
+                <span class="demo_name block center border radius">Name comic</span>
+                <a href="" class="demo_read block center border radius"></a>
+                <div class="wrap_row1">
+                    <p>Reading: <span class="demo_chap">Chap</span></p>
+                    <span class="demo_comic"></span>
+                </div>
+                <div class="wrap_row2 close">
+                    <span>Main: <span class="demo_character"></span></span>
+                    <span>Thể loại: <span class="demo_genre"></span></span>
+                </div>
+                <div class="box_nav">
+                    <div class="box-close">Đóng</div>
+                    <div class="box-delete">Xóa</div>
+                </div>
+            </div>
+        </div>
+        <div class="wrap-list_page">
+            <i class="fa-solid fa-chevron-left prev-page close"></i>
+            <ul class="listPage">
+            </ul>
+            <i class="fa-solid fa-chevron-right next-page"></i>
+        </div>
+    </div>
+    <div id="web-genre">
+        <div class="col">
+            <div class="web-genre_head"></div>
+            <div class="web-genre_type">
+                <p>Kiểu truyện tranh</p>
+                <div>
+                    <span id="truyentranh" class="choose">Truyện tranh</span>
+                    <span id="truyenchu">Truyện chữ</span>
+                    <!-- <span id="truyentranh18">Truyện tranh 18+</span> -->
+                </div>
+            </div>
+            <ul id="list-genre"><!--JS--></ul>
+        </div>
+    </div>
+    <div id="web-extra">
+        <i class="fa-solid fa-plus"></i>
+    </div>
+    <div id="web-cookies">
+        <div class="web-cookies_title">
+            Trang Web sẽ ghi nhận những sự thay đổi của người dùng, bạn có chấp nhận điều đó hay không?
+        </div>
+        <div class="web-cookies_btn" >
+            <span>Accept<i>(Chấp nhận)</i></span>
+            <span>Refuse<i>(Từ chối)</i></span>
+        </div>
+        <i class="fa-solid fa-xmark"></i>
+    </div>
+    <footer>
+        <div class="col">
+            <div class="footer-infor">
+                <p>Thông tin bản quyền &#169 thuộc về Xasduong.</p>
+                <img src="src/img/extraComic.jpg" alt="">
+            </div>
+            <ul class="footer-note">
+                <span>Hướng Dẫn Sử Dụng</span>
+                <li>1. Để thêm chuyện bạn có thể nhấn vào nút "Thêm truyện"</li>
+                <li>2. Hoặc là chọn vào hình 
+                    <i class="fa-solid fa-plus" style="color: #ddd; font-size: 24px;"></i>
+                    (dấu cộng) ở góc dưới bên phải màn hình
+                </li>
+                <li>3. Nhập vào các giá trị mà bạn muốn lưu</li>
+                <li>4. Nhấn vào nút <p>Thêm truyện</p> để đẩy thông tin lên LocalStorage</li>
+                <li>5. Chúc bạn đọc truyện vui vẻ</li>
+            </ul>
+        </div>
+    </footer>
+    <div id="over-lay" class="close"></div>
+    <script type="module" src="src/js/index.js"></script>
+</body>
+</html>

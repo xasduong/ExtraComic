@@ -1,0 +1,206 @@
+/* .col{
+    background: rgb(229, 225, 245);
+} */
+.comic-name{
+    color: #000;
+    text-shadow: none;
+}
+.img:before{color: var(--black)}
+/* .comic-chap{color: #000;} */
+#web-genre  .web-genre_head{
+    color: #f3eded;
+    text-shadow: 1px 2px 3px var(--black)
+}
+comic-nav_type >li > input::-webkit-input-placeholder{
+    color: #000;
+}
+@media only screen and (min-width : 479px) and (max-width: 1023px) { 
+    .comic-nav_type li{
+        display: none;
+    }
+    .comic-nav_type li:last-child{
+        display: block;
+    }
+    #web-genre{
+        width: 96%;
+    }
+    .genre_head-title{
+        display: flex;
+        align-items:center;
+        gap: 4px;
+        flex-wrap: wrap;
+    }
+    #list-genre{
+        grid-template-columns: repeat(4, 1fr);
+        margin: 48px auto 20px auto;
+        max-height: 338px;
+        overflow-y: scroll;
+    }
+    .comic-random_genre{
+        height: 62px;
+        padding-right: 4px;
+        overflow-y: scroll;
+    }
+    .comic-random_links{ 
+        position: absolute;
+        top: 112%;
+        left: 0;
+    }
+    #list-comic{ 
+        grid-template-columns: repeat(4, 1fr);
+    } 
+     /* ------------------------------------------------------- */
+    .comic-genre_box{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width : 480px) { 
+    #col{
+        width: 100%;
+    }
+    #comic-head{
+        font-size: 20px;
+    }
+    #comic-random > .col{
+        height: 200px;
+    }
+    .comic-random_wrap{
+        right: 30%;
+    }
+    .comic-random_wrap b{display: none;}
+    .comic-random_img{
+        width: 56%;
+        left: 50%;
+        transform: rotate(10deg);
+    }
+    .comic-random_name{
+        font-size: 20px;
+        width: 175px;
+        text-align: center;
+        text-indent: 0;
+    }
+    .comic-random_genre{display: none;}
+    .comic-random_links{
+        display: block;
+        margin-top: 36px;
+    }
+    .random_links-comic{display: none;}
+    .comic-random_links a{
+        width: 120px;
+        margin-left: 28px;
+    }
+    .comic-random_links a:last-child{display: none;}
+    #comic-head .col{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #comic-head .col > i{
+        margin-right: 8px;
+        font-size: 28px;
+        color: rgb(12, 166, 238);
+    }
+    .list-nav .col{
+        display: block;
+        position: absolute;
+        border-radius: 5px;
+        top: 4px;
+        padding: 12px;
+    }
+    #navIcon{display: block;}
+    #navIcon.close{display: none;}
+
+    .list-nav{display: none};
+    #setting , #array_api, #direct-web, .genre-web{
+        border-right: none;
+        text-transform: uppercase;
+    }
+    #comic-nav .col{
+        display: block;
+        margin: 0;
+    }
+    .comic-nav_icon{
+        display: block;
+    }
+    .comic-nav_type{
+        display: none;
+        margin-top: 12px;
+    }
+    .comic-nav_infor span{display: block;
+        text-indent: 12px;
+    }
+    .comic-nav_type > li{
+        margin-bottom: 4px;
+    }
+    #list-comic{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #extra-comic{
+        display: block;
+        width: 96%;
+        top: 16px;
+    }
+    #extra-comic form{
+        width: 100%;
+    }
+    #extra-comic form .box-btn {
+        margin: 12px auto 75px auto;
+    }
+    #extra-comic form .reload-web{display: none;}
+    .box-demo{
+        display: none;
+    }
+    .comic-infor{
+        top: 40%;
+    }
+    .comic-img{height: 200px; }
+    #list-genre{
+        grid-template-columns: repeat(2, 1fr);
+        margin: 0;
+        max-height: 250px;
+        overflow-y: scroll;
+    }
+    #web-genre {
+        width: 98%;
+        padding: 4px;
+        height: 440px;
+        top: -200%;
+    }
+    #web-genre >.web-genre_head{ 
+        font-size: 20px;
+    }
+    #list-genre> li {
+        padding: 6px;
+        font-size: 15px;
+    }
+    #extra-comic form .box-head {
+        padding: 0;
+        text-indent: 16px;
+    }
+    /* ------------------------------------------------------- */
+    .web-genre_type div{
+        flex-wrap: wrap;
+    }
+    .web-genre_type div span{
+        font-size: 13px;
+    }
+    /* ------------------------------------------------------- */
+    footer .col{
+        display: block;
+    }
+    .footer-infor{
+        width: 100%;
+    }
+    /* ------------------------------------------------------- */
+    .comic-genre_box{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+.close{
+    display: none;
+}
+.open{
+    display: block;
+}
+

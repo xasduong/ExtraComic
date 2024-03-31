@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/13dc34c750.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/jpg" href="src/img/y_2021.jpg">
+    <link rel="stylesheet" href="src/css/web.css">
+    <link rel="stylesheet" href="src/css/array.css">
+    <link rel="stylesheet" href="src/css/responsive.css">
+    <title>ReadComic-API</title>
+</head>
+<body>
+    <div class="col" id="box-web">
+        <div class="box-nav">
+            <div class="box-nav_link">
+                <a href="./index.html">Home</a>
+                <a href="./website.html">Website</a>
+                <a href="" target="_blank" class="link-google">G-Sheet</a>
+            </div>
+            <p>Tìm truyện
+                <i class="fa-solid fa-list genre_icon"></i>
+            </p>
+            <input class="search-comic" type="text" placeholder="Tìm truyện theo Tên">
+            <div class="box-infor">Tìm được tất cả 
+                <span class="comic_num"></span> truyện theo 
+                <span class="type_comic">thể loại</span>:
+                <span class="comic_genre"><!--JS--></span>
+            </div>
+            <div class="box-google">
+                <p>Thêm đường link để lưu API</p>
+                <input type="text" class="box-goole_current">
+                <input type="text" class="box-goole_post" placeholder="Google sheet">
+                <div class="box-google_btn">Thêm đường link</div>
+            </div>
+        </div>
+        <div class="box-genre">
+            <div class="box-genre_head">Chọn thể loại bạn muốn tìm</div>
+            <div class="box-genre_list"></div>
+            <div class="box-genre_extra">
+                <div>
+                    <input type="text" placeholder="Thêm thể loại khác vào đây">
+                </div>  
+                <p>Thêm thể loại</p> 
+            </div>
+        </div>
+        <div class="box-api">   
+            <div class="box-api_comic"> 
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+            <!--JS-->
+            </div>
+            <div class="box-api_array">
+                    <div class="api_array-new">
+                        <p>Thêm giá trị và đẩy lên LocalStorage!</p>
+                        <input type="text" class="arr-comic_new" placeholder="Thêm dữ liệu Truyện Tranh( mảng JSON)" required>
+                        <div class="post-btn">POST API</div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <div id="over-lay" class="close"></div>
+    <script type="module" src="src/js/array.js"></script>
+</body>
+</html>
